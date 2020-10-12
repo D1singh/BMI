@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/hind_madurai_bold"
+        android:text="@string/bmi"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtBMI"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:id="@+id/FirstRelativeOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cardbackground">
+
+            <TextView
+                android:id="@+id/txtGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/gender"
+                android:textColor="#375723" />
+
+            <Spinner
+                android:id="@+id/Spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="17dp" />
+
+            <ImageView
+                android:id="@+id/Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/male"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/Female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/femaleone"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/Units"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtGender"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/unit"
+                android:textColor="#375723" />
+
+            <EditText
+                android:id="@+id/WeightInKg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtGender"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:hint="@string/weight_in_kg"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColorHint="#BC7744" />
+
+
+            <TextView
+                android:id="@+id/Height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Units"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/height"
+                android:textColor="#375723" />
+
+
+            <EditText
+                android:id="@+id/HeightInInches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/WeightInKg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="143dp"
+                android:layout_marginBottom="8dp"
+                android:background="@null"
+                android:hint="@string/height_in_inch"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColorHint="#BC7744" />
+
+            <Button
+                android:id="@+id/CalculateBMI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/HeightInInches"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:textColor="#FBFAFA"
+                android:background="@drawable/button_back_grough"
+                android:padding="4dp"
+                android:text="@string/calculate_bmi" />
+
+            <TextView
+                android:id="@+id/youBMI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/CalculateBMI"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/your_bmi"
+                android:textColor="#375723" />
+
+            <TextView
+                android:id="@+id/ShowResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/CalculateBMI"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:hint="@string/result"
+                android:textAlignment="center"
+                android:textColorHint="#BC7744" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CardViewFirst">
+
+        <ImageView
+            android:id="@+id/Fml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bmi_adult" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
